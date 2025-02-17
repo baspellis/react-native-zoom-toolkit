@@ -20,10 +20,10 @@ describe('ResumableZoom Validation Tests', () => {
     }).toThrow();
   });
 
-  it('should throw error when minScale is lesser than one', () => {
+  it('should throw error when minScale is zero', () => {
     expect(() => {
       return render(
-        <ResumableZoom minScale={0.5}>
+        <ResumableZoom minScale={0}>
           <View style={{ width: 200, height: 200 }} />
         </ResumableZoom>
       );

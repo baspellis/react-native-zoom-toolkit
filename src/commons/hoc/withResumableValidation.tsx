@@ -14,8 +14,8 @@ export default function withResumableValidation<
       throw new Error(message);
     }
 
-    if (minScale !== undefined && minScale < 1) {
-      throw new Error('minScale must be greater than or equals one');
+    if (minScale !== undefined && minScale <= 0) {
+      throw new Error('minScale must be greater than zero');
     }
 
     const isMaxScaleNumber = typeof maxScale === 'number';
